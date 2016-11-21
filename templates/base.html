@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/Bootstrap/bootstrap.min.css">
+  <style>
+    pre {
+      height: auto;
+      max-height: 500px;
+      overflow: auto;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="static/css/Bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function open_window(url) {
+      window.open(url);
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+{% block body %}
+<H1>This is the base template default body.</H1>
+{% endblock %}
+</div>
+</body>
+</html>

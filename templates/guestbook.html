@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    <H1>Sign my Guestbook!</H1>
+    <table class="table">
+        {% for entry in guestbook %}
+            <tr>
+                <td>{{ entry.date }}</td><td>{{ entry.name }}</td><td>{{ entry.comment }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <form action="add_entry">
+        <input type="hidden" name="guestbook_id" value="3">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="input" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="comment">Your Comment:</label>
+          <input type="input" class="form-control" id="comment" name="comment">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+{% endblock %}
+
